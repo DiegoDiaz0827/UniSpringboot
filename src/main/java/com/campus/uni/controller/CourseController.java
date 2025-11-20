@@ -34,6 +34,14 @@ public class CourseController {
 
     }
 
+    @GetMapping("/debug")
+    public List<String> debug() {
+        return service.findall()
+                .stream()
+                .map(c -> c.getProfesor().getNombre())
+                .toList();
+    }
+
     @GetMapping("/buscar")
     public List<Course> cursosbyprofesor(@RequestParam String nameprofesor){
         return service.findByProfesorNombre(nameprofesor);

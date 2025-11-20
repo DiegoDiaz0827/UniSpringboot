@@ -33,10 +33,12 @@ public class Profesor {
     public boolean equals(Object o){
 
         if(this == o) return true;
-        if(!(o instanceof  Course)) return false;
+        if(!(o instanceof  Profesor)) return false;
         Profesor other = (Profesor) o;
         return id != null && id.equals(other.getId());
     }
+
+
 
     @Override
     public String toString(){
