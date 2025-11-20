@@ -44,9 +44,9 @@ public class Courseservice implements Icursoservice {
     }
 
     @Override
-    public List<Course> findByprofesor_nombre (String name){
+    public List<Course> findByProfesorNombre (String name){
 
-        return repo.findByprofesor_nombre(name);
+        return repo.findByProfesorNombre(name);
     }
 
 

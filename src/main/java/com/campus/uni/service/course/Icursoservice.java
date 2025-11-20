@@ -9,5 +9,5 @@ public interface Icursoservice {
     List<Course>findall();
     Course findbyid(Long id);
     Course save(Course c,Long id);
-    List<Course>findByprofesor_nombre(String name);
+    List<Course>findByProfesorNombre(String name);
 }

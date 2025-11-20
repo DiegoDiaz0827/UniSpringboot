@@ -36,7 +36,7 @@ public class CourseController {
 
     @GetMapping("/buscar")
     public List<Course> cursosbyprofesor(@RequestParam String nameprofesor){
-        return service.findByprofesor_nombre(nameprofesor);
+        return service.findByProfesorNombre(nameprofesor);
 
     }
 
