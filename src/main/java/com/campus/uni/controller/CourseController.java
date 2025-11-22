@@ -1,6 +1,7 @@
 package com.campus.uni.controller;
 
 import com.campus.uni.Entities.Course;
+import com.campus.uni.Entities.Student;
 import com.campus.uni.service.course.Courseservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -48,6 +49,16 @@ public class CourseController {
 
     }
 
+    @PutMapping("/actualizar/{idc}/{idpro}")
+    public ResponseEntity<Course> cambiarprofesor(@PathVariable Long idc, @PathVariable Long idpro){
+        Course c = service.actprofesor(idc,idpro);
+        if(c != null){
+            return ResponseEntity.ok(c);
+        }
+
+        return ResponseEntity.notFound().build();
+
+    }
 
 
 

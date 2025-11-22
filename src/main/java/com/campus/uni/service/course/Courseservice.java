@@ -49,7 +49,16 @@ public class Courseservice implements Icursoservice {
         return repo.findByProfesorNombre(name);
     }
 
-
+    @Override
+    public Course actprofesor(Long courseid, Long profesorId) {
+        Course c = findbyid(courseid);
+        Profesor pro = repo2.findById(profesorId).orElse(null);
+        if(pro != null){
+            c.setProfesor(pro);
+            return repo.save(c);
+        }
+        return null;
+    }
 
 
 }
